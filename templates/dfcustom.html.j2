@@ -1,0 +1,24 @@
+{% extends "layout.html.j2" %}
+{% from "macros/table_format.html.j2" import format_cell %}
+
+{% block title %}Custom DataFrame Example {% endblock %}
+
+{% block body %}
+<table>
+    <tr>
+        {% for header in headers %}
+            <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+    {% for row in data %}
+        <tr>
+            {% for header in headers %}
+                {{ format_cell(header, row) }}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+{{ dataframe|safe }}
+{% endblock %}
