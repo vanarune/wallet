@@ -1,5 +1,5 @@
 pandas==0.25.1
 flask==1.1.1
 tabula==1.0.5
-numpy==1.17.2
+numpy==1.22.0
 azure==4.0.0
